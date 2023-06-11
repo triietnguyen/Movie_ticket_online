@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\Online_Movie.csproj": {}
+    "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\Online_Movie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\Online_Movie.csproj": {
+    "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\Online_Movie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\Online_Movie.csproj",
+        "projectUniqueName": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\Online_Movie.csproj",
         "projectName": "Online_Movie",
-        "projectPath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\Online_Movie.csproj",
+        "projectPath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\Online_Movie.csproj",
         "packagesPath": "C:\\Users\\triet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\obj\\",
+        "outputPath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\triet\\AppData\\Roaming\\NuGet\\NuGet.Config",

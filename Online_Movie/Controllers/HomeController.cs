@@ -27,6 +27,11 @@ namespace Online_Movie.Controllers
         {
             return View("ViewMovieDetails");
         }
+
+        public IActionResult ViewAllMovies()
+        {
+            return View("ViewAllMovies");
+        }
         public IActionResult Index()
         {
             List<Movie> movies = movieDAO.getAllMovies();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fAzDgJGnMvGvKlRqwXmGWAmctoImiXD32eZBKZMZNxz7t16LpaWrug0L35Fd6sMop96iwdEWkR8crthZlqZD7g==",
+  "dgSpecHash": "q2ruQQAN068Zn+DUTrVheMXyHVId6f+q4jG5eAlR7KZiOZHzGg5/rk49mBV8hWodJR/3tL0m3XROFTyNHV8XGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Online_Movie\\Online_Movie.csproj",
+  "projectFilePath": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\Online_Movie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\triet\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\triet\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
