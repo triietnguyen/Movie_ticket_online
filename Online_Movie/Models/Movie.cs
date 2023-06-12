@@ -11,7 +11,7 @@ public partial class Movie
 
     public string? MovieName { get; set; }
 
-    public double? Rating { get; set; }
+    public string? Duration { get; set; }
 
     public int? Likes { get; set; }
 
@@ -24,8 +24,6 @@ public partial class Movie
     public virtual Category? Category { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-
-    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 
     public virtual ICollection<Showtime> Showtimes { get; set; } = new List<Showtime>();
 }

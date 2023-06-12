@@ -30,7 +30,8 @@ namespace Online_Movie.Controllers
 
         public IActionResult ViewAllMovies()
         {
-            return View("ViewAllMovies");
+            List<Movie> movies = movieDAO.getAllMovies();
+            return View(movies);
         }
         public IActionResult Index()
         {

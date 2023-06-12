@@ -8,7 +8,6 @@ public partial class MoviesContext : DbContext
 {
     public MoviesContext()
     {
-        
     }
 
     public MoviesContext(DbContextOptions<MoviesContext> options)
@@ -23,8 +22,6 @@ public partial class MoviesContext : DbContext
     public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
     public virtual DbSet<OrderMovie> OrderMovies { get; set; }
-
-    public virtual DbSet<Rating> Ratings { get; set; }
 
     public virtual DbSet<Showtime> Showtimes { get; set; }
 
@@ -57,6 +54,10 @@ public partial class MoviesContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("actors");
             entity.Property(e => e.CategoryId).HasColumnName("categoryId");
+            entity.Property(e => e.Duration)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("duration");
             entity.Property(e => e.Image)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -68,7 +69,6 @@ public partial class MoviesContext : DbContext
             entity.Property(e => e.Price)
                 .HasColumnType("money")
                 .HasColumnName("price");
-            entity.Property(e => e.Rating).HasColumnName("rating");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Movies)
                 .HasForeignKey(d => d.CategoryId)
@@ -114,20 +114,7 @@ public partial class MoviesContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_Order_Movie_User");
         });
-
-        modelBuilder.Entity<Rating>(entity =>
-        {
-            entity.ToTable("Rating");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.MovieId).HasColumnName("movieId");
-            entity.Property(e => e.Rating1).HasColumnName("rating");
-
-            entity.HasOne(d => d.Movie).WithMany(p => p.Ratings)
-                .HasForeignKey(d => d.MovieId)
-                .HasConstraintName("FK_Rating_Movie");
-        });
-
+        
         modelBuilder.Entity<Showtime>(entity =>
         {
             entity.ToTable("Showtime");
