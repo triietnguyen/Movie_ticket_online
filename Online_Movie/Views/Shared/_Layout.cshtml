@@ -23,10 +23,10 @@
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
 				<h1>
-					<a class="navbar-brand" href="index.html">
+					<a asp-controller="Home" asp-action="Index" class="navbar-brand" >
 						<span class="fa fa-play icon-log"
 							  aria-hidden="true"></span>
-						MyShowz
+						EGS
 					</a>
 				</h1>
 				<!-- if logo is image enable this
@@ -43,19 +43,14 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link" asp-action="Index">Home</a>
+						<li class="nav-item ">
+							<a class="nav-link"asp-controller="Home" asp-action="Index">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" asp-action="ViewAllMovies">Movies</a>
+						<li class="nav-item ">
+							<a class="nav-link" asp-controller="Home" asp-action="ViewAllMovies">Movies</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
-						</li>
-
-
-						<li class="nav-item">
-							<a class="nav-link" href="Contact_Us.html">Contact</a>
+						<li class="nav-item ">
+							<a class="nav-link" asp-controller="Home" asp-action="About">About</a>
 						</li>
 					</ul>
 
@@ -63,38 +58,25 @@
 					<!--/search-right-->
 					<div class="search-right">
 						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">
-							Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
+							Category <span class="fa fa-search ml-3" aria-hidden="true"></span>
 						</a>
 						<!-- search popup -->
 						<div id="search" class="pop-overlay">
 							<div class="popup">
-								<form action="#" method="post" class="search-box">
+								@*<form action="#" method="post" class="search-box">
 									<input type="search" placeholder="Search your Keyword" name="search"
 										   required="required" autofocus="">
 									<button type="submit" class="btn">
 										<span class="fa fa-search"
 											  aria-hidden="true"></span>
 									</button>
-								</form>
+								</form>*@
 								<div class="browse-items">
-									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
 									<ul class="search-items">
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
+										@foreach (var item in categoryRepository.GetAll())
+										{
+											<li><a asp-controller="Home" asp-action="findMoviesByCategoryId" asp-route-id="@item.CategoryId">@item.CategoryName</a></li>
+										}
 									</ul>
 								</div>
 							</div>
@@ -102,12 +84,10 @@
 						</div>
 						<!-- /search popup -->
 						<!--/search-right-->
-
 					</div>
-					<div class="Login_SignUp" id="login"
-						 style="font-size: 2rem ; display: inline-block; position: relative;">
+					<div class="Login_SignUp" id="login" style="font-size: 2rem ; display: inline-block; position: relative;">
 						<!-- <li class="nav-item"> -->
-						<a class="nav-link" href="sign_in.html"><i class="fa fa-user-circle-o"></i></a>
+						<a asp-controller="Account" asp-action="Login" class="nav-link" ><i class="fa fa-user-circle-o"></i></a>
 						<!-- </li> -->
 					</div>
 				</div>

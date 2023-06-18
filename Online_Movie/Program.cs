@@ -21,6 +21,8 @@ builder.Services.AddDbContext<MoviesContext>(options =>
 builder.Services.AddTransient<IMovieReposistory, MovieReposistory>();
 builder.Services.AddTransient<ICategoryReposistory, CategoryReposistory>();
 builder.Services.AddTransient<IUserReposistory, UserRepository>();
+//step 1
+builder.Services.AddSession();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,12 +35,14 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+//step 2
+app.UseSession();
 
 app.MapAreaControllerRoute(
     name: "MyAreas",
     areaName: "Admin",
     pattern: "Admin/{controller}/{action=Index}/{id?}",
-    defaults: new { controller = "Home", action = "Index" }
+    defaults: new { controller = "Home", action = "Index"}
     );
 
 app.MapControllerRoute(

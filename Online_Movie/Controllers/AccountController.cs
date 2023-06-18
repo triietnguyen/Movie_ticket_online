@@ -10,10 +10,11 @@ namespace Online_Movie.Controllers
     public class AccountController : Controller
     {
         private IUserReposistory _userReposistory;
-
-        public AccountController(IUserReposistory userReposistory)
+        private MoviesContext _ctx;
+        public AccountController(IUserReposistory userReposistory, MoviesContext ctx)
         {
             _userReposistory = userReposistory;
+            _ctx = ctx;
         }
 
         public IActionResult Index()
@@ -25,10 +26,49 @@ namespace Online_Movie.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Login()
         {
+            if (HttpContext.Session.GetString("UserName") == null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index","Home");
+            }
+            
+        }
+        [HttpPost]
+        public IActionResult Login(User user)
+        {
+            if (HttpContext.Session.GetString("UserName") == null)
+            {
+                var u = _ctx.Users.Where(x=>x.UserName.Equals(user.UserName)&& x.Password.Equals(user.Password)).ToList().FirstOrDefault();
+                if (u!=null)
+                {
+                    if (user.GroupId == 2)
+                    {
+                        HttpContext.Session.SetString("UserName", u.UserName.ToString());
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        HttpContext.Session.SetString("UserName", u.UserName.ToString());
+                        return RedirectToAction("Index", "Home","Admin");
+                    }
+                    
+                }
+            }
             return View();
+
+        }
+
+        public IActionResult Logout() 
+        {
+            HttpContext.Session.Clear();
+            HttpContext.Session.Remove("UserName");
+            return RedirectToAction("Login", "Account");
         }
         public IActionResult Privacy()
         {

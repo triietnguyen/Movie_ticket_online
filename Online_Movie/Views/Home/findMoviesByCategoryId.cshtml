@@ -1,85 +1,231 @@
 ﻿@model List<Online_Movie.Models.Movie>
-<div class="single-product-area">
-    <section class="mainContent">
-        <div class="container-fluid w-100">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="~/images/img1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/img2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/img3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/img4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <div class="container">
-        <div class="row">
-            <h1 class="mt-4">Phim đang chiếu</h1>
-            @foreach (var item in Model)
-            {
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="~/images/@item.Image" alt="">
-                        </div>
-                        <h2 href="">@item.MovieName</h2>
-                        <div class="product-carousel-price">
-                            @item.Price VND
-                        </div>
-
-                        @*<div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>*@
-                    </div>
-                </div>
-            }
-
-
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="product-pagination text-center">
-                    <nav>
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--/breadcrumbs -->
+<div class="w3l-breadcrumbs">
+	<nav id="breadcrumbs" class="breadcrumbs">
+		<div class="container page-wrapper">
+			<a asp-action="Index">Home</a> » <span class="breadcrumb_last" aria-current="page">movies</span>
+		</div>
+	</nav>
 </div>
+
+<section class="w3l-albums py-5" id="projects">
+	<div class="container py-lg-4">
+		<div class="row">
+			<div class="col-lg-12 mx-auto">
+				<!--Horizontal Tab-->
+				<div id="parentHorizontalTab">
+					<ul class="resp-tabs-list hor_1">
+						<li>NOW SHOWING</li>
+						<li>COMMING SOON</li>
+						<div class="clear"></div>
+					</ul>
+					<div class="resp-tabs-container hor_1">
+						<div class="albums-content">
+							<div class="row">
+								@foreach (var movie in Model)
+								{
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="movies.html">
+
+													<img src="~/assets/images/@movie.Image" class="img-fluid"
+													 alt="author image">
+													<div class="overlay-icon">
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="movies.html">@movie.MovieName</a>
+												<h4>
+													<span class="post">
+														<span class="fa fa-clock-o"> </span> @movie.Duration
+													</span>
+
+													<span class="post fa fa-heart">@movie.Likes</span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+								}
+								<!--/set1-->
+
+							</div>
+						</div>
+						<div class="albums-content">
+							<div class="row">
+								<!--/set1-->
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m1.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Rocketman</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m2.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Doctor Sleep</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m3.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Knives Out</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m7.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Frozen 2</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m8.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Toy Story 4</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+									<div class="slider-info">
+										<div class="img-circle">
+											<a href="movies.html">
+												<img src="~/assets/images/m9.jpg" class="img-fluid"
+													 alt="author image">
+												<div class="overlay-icon">
+
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</div>
+											</a>
+										</div>
+										<div class="message">
+											<p>English</p>
+											<a class="author-book-title" href="movies.html">Joker</a>
+											<h4>
+												<span class="post">
+													<span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+												</span>
+
+												<span class="post fa fa-heart text-right"></span>
+											</h4>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--grids-sec2-->

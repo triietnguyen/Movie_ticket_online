@@ -9,7 +9,6 @@ public partial class MoviesContext : DbContext
     public MoviesContext()
     {
     }
-
     public MoviesContext(DbContextOptions<MoviesContext> options)
         : base(options)
     {

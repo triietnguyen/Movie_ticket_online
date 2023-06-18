@@ -1,0 +1,79 @@
+﻿@model Online_Movie.Models.Movie
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewMovieDetail</title>
+</head>
+<body>
+    <!--/breadcrumbs -->
+    <div class="w3l-breadcrumbs">
+        <nav id="breadcrumbs" class="breadcrumbs">
+            <div class="container page-wrapper">
+                <a asp-action="Index">Home</a> » <span class="breadcrumb_last" aria-current="page">movies</span>
+            </div>
+        </nav>
+    </div>
+<div>
+        <h1>Detail</h1>
+    <div class="row">
+            <div class="col-md-4">
+                <div class="product-images">
+                    <img src="~/assets/images/@Model.Image" height="400px" width="400px" />
+                </div>
+            </div>
+            <div class="col-md-8">
+                    <div class="product-content-right">
+                        
+                                <div class="product-inner">
+                                    <h2>@Model.MovieName</h2>
+                                    <div class="product-inner-price">
+                                        <ins>$700.00</ins> <del>$100.00</del>
+                                    </div>
+                                    <div class="product-inner-category">
+                                        <p>Category</p> 
+                                    </div>
+                                    <div role="tabpanel">
+                                        <ul class="product-tab" role="tablist">
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
+                                        </ul>
+                                    </div>
+                        <form asp-action="Ticket_Booking" class="cart">
+                            <button class="add_to_cart_button" type="submit">Book</button>
+                        </form>
+                                </div>
+                            </div>                                
+                            </div>
+                        </div>
+                  
+                @*<dd class="col-sm-10">
+                    <img src="~/assets/images/@Model.Image" height="100px" width="100px" />
+                </dd>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MovieName)
+                </dd>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Duration)
+                </dd>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Likes)
+                </dd>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Actors)
+                </dd>
+
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Category.CategoryId)
+                </dd>*@
+         
+        
+    </div>
+
+</body>
+</html>
