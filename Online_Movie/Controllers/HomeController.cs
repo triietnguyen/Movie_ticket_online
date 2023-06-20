@@ -45,7 +45,11 @@ namespace Online_Movie.Controllers
 		{
 			return View();
 		}
-		public IActionResult About()
+        public IActionResult Seat_Selection()
+        {
+            return View();
+        }
+        public IActionResult About()
 		{
 			return View();
 		}

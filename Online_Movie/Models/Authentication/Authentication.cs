@@ -14,6 +14,7 @@ namespace Online_Movie.Models.Authentication
                     {
                         {"Controller","Account"},
                         {"Action","Login" }
+                        
                     });
             }
         }

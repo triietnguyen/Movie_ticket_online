@@ -2097,6 +2097,42 @@
       "PackagePath": "staticwebassets\\Admin\\js\\startmin.js"
     },
     {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\css\\style.css",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\blank-profile-picture.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\blank-profile-picture.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\free-checkered.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\free-checkered.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\kisspng-20th-century-fox-home-entertainment-logo-fox-netwo-tourism-promotion-5b384a9a4d0163.3125958615304157703154.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\kisspng-20th-century-fox-home-entertainment-logo-fox-netwo-tourism-promotion-5b384a9a4d0163.3125958615304157703154.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\logo-name-1.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\logo-name-1.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\logo-name.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\logo-name.png"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\screenshot.PNG",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\screenshot.PNG"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\screenshot_2.png",
+      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\screenshot_2.png"
+    },
+    {
       "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\assets\\css\\as-alert-message.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\as-alert-message.min.css"
     },

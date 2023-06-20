@@ -47,15 +47,15 @@ namespace Online_Movie.Controllers
                 var u = _ctx.Users.Where(x=>x.UserName.Equals(user.UserName)&& x.Password.Equals(user.Password)).ToList().FirstOrDefault();
                 if (u!=null)
                 {
-                    if (user.GroupId == 2)
+                    if (user.UserName=="Admin")
                     {
                         HttpContext.Session.SetString("UserName", u.UserName.ToString());
-                        return RedirectToAction("Index", "Home");
+                        return Redirect("/admin");
                     }
                     else
                     {
                         HttpContext.Session.SetString("UserName", u.UserName.ToString());
-                        return RedirectToAction("Index", "Home","Admin");
+                        return RedirectToAction("Index", "Home");
                     }
                     
                 }

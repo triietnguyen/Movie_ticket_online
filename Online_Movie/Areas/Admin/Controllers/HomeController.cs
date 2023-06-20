@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Online_Movie.Models;
+using Online_Movie.Models.Authentication;
 using Online_Movie.Repository;
 
 namespace Online_Movie.Areas.Admin.Controllers
@@ -15,6 +16,7 @@ namespace Online_Movie.Areas.Admin.Controllers
             _movieReposistory = movieReposistory;
             _categoryReposistory = categoryReposistory;
         }
+        [Authentication]
         public IActionResult Index()
         {
             return View();
