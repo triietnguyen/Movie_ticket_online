@@ -9,6 +9,7 @@ public partial class MoviesContext : DbContext
     public MoviesContext()
     {
     }
+
     public MoviesContext(DbContextOptions<MoviesContext> options)
         : base(options)
     {
@@ -113,20 +114,21 @@ public partial class MoviesContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_Order_Movie_User");
         });
-        
+
         modelBuilder.Entity<Showtime>(entity =>
         {
             entity.ToTable("Showtime");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date)
-                .HasColumnType("datetime")
+                .HasColumnType("date")
                 .HasColumnName("date");
             entity.Property(e => e.Location)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("location");
             entity.Property(e => e.MovieId).HasColumnName("movieId");
+            entity.Property(e => e.Time).HasColumnName("time");
 
             entity.HasOne(d => d.Movie).WithMany(p => p.Showtimes)
                 .HasForeignKey(d => d.MovieId)

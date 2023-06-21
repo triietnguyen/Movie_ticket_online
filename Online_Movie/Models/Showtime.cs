@@ -11,6 +11,8 @@ public partial class Showtime
 
     public DateTime? Date { get; set; }
 
+    public TimeSpan? Time { get; set; }
+
     public string? Location { get; set; }
 
     public virtual Movie? Movie { get; set; }
