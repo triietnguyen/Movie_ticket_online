@@ -1,25 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Online_Movie.Areas.Identity.Data;
 using Online_Movie.Models;
-using Online_Movie.Models.Authentication;
 using Online_Movie.Repository;
 
 namespace Online_Movie.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeController : Controller
+	[Authorize(Roles = "Administrator")]
+	public class HomeController : Controller
     {
         private IMovieReposistory _movieReposistory;
         private ICategoryReposistory _categoryReposistory;
+        private readonly SignInManager<Online_MovieUser> _signInManager;
 
-        public HomeController(IMovieReposistory movieReposistory, ICategoryReposistory categoryReposistory)
+        public HomeController(IMovieReposistory movieReposistory, ICategoryReposistory categoryReposistory, SignInManager<Online_MovieUser> signInManager)
         {
             _movieReposistory = movieReposistory;
             _categoryReposistory = categoryReposistory;
+            _signInManager = signInManager;
         }
-        [Authentication]
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync();
+            return LocalRedirect("/identity/account/login");
         }
 
         [HttpPost]

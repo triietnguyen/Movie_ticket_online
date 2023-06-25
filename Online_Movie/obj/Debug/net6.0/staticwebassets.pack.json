@@ -2853,58 +2853,6 @@
       "PackagePath": "staticwebassets\\Movie_Detail\\sass\\style.scss"
     },
     {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\css\\style.css",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\css\\style.css"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\blank-profile-picture.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\blank-profile-picture.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\favicon.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\favicon.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\free-checkered.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\free-checkered.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\kisspng-20th-century-fox-home-entertainment-logo-fox-netwo-tourism-promotion-5b384a9a4d0163.3125958615304157703154.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\kisspng-20th-century-fox-home-entertainment-logo-fox-netwo-tourism-promotion-5b384a9a4d0163.3125958615304157703154.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\logo-name-1.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\logo-name-1.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\images\\logo-name.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\images\\logo-name.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\screenshot.PNG",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\screenshot.PNG"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Ticket_Booking\\screenshot_2.png",
-      "PackagePath": "staticwebassets\\Movie_Ticket_Booking\\screenshot_2.png"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Seat_Booking\\Godzilla vs. Kong – Official Trailer.mp4",
-      "PackagePath": "staticwebassets\\Seat_Booking\\Godzilla vs. Kong – Official Trailer.mp4"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Seat_Booking\\Marvel Studios' Avengers： Infinity War Official Trailer.mp4",
-      "PackagePath": "staticwebassets\\Seat_Booking\\Marvel Studios' Avengers： Infinity War Official Trailer.mp4"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Seat_Booking\\css\\style.css",
-      "PackagePath": "staticwebassets\\Seat_Booking\\css\\style.css"
-    },
-    {
-      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Seat_Booking\\js\\script.js",
-      "PackagePath": "staticwebassets\\Seat_Booking\\js\\script.js"
-    },
-    {
       "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\assets\\css\\as-alert-message.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\as-alert-message.min.css"
     },
@@ -3675,6 +3623,42 @@
     {
       "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\css\\jquery.seat-charts.css",
+      "PackagePath": "staticwebassets\\seat_selection\\css\\jquery.seat-charts.css"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\css\\style.css",
+      "PackagePath": "staticwebassets\\seat_selection\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\seat_selection\\images\\banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\jquery.nicescroll.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\jquery.nicescroll.js"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\jquery.seat-charts.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\jquery.seat-charts.js"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\jquery.seat-charts.min.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\jquery.seat-charts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\seat_selection\\js\\theme-change-seat-sel.js",
+      "PackagePath": "staticwebassets\\seat_selection\\js\\theme-change-seat-sel.js"
     },
     {
       "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\style.css",

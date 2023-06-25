@@ -1522,9 +1522,10 @@ ul.arrow {
         color: #ffaa3c; }
 
 .main-content .container {
-  background: white;
-  border-radius: 5px;
-  padding: 30px; }
+    background: #0d0d0e;
+    border-radius: 5px;
+    padding: 30px;
+}
 
 .section-title {
   font-size: 30px;
