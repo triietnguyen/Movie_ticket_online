@@ -13,7 +13,8 @@ using Online_Movie.Areas.Identity.Data;
 
 namespace Online_Movie.Areas.Identity.Pages.Account
 {
-    public class LogoutModel : PageModel
+	[AllowAnonymous]
+	public class LogoutModel : PageModel
     {
         private readonly SignInManager<Online_MovieUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;

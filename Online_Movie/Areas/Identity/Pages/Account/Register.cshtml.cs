@@ -60,7 +60,7 @@ namespace Online_Movie.Areas.Identity.Pages.Account
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -101,13 +101,13 @@ namespace Online_Movie.Areas.Identity.Pages.Account
         }
 
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string? returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -119,17 +119,25 @@ namespace Online_Movie.Areas.Identity.Pages.Account
                 user.Address = Input.Address;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var userId = await _userManager.GetUserIdAsync(user);
+                    // Checking if customer role already exists
+                    bool exists = await _roleManager.RoleExistsAsync("Customer");
+                    if (!exists)
+                    {
+                        // First we are creating Admin role
+                        var role = new IdentityRole();
+                        role.Name = "Customer";
+                        await _roleManager.CreateAsync(role);
+                    }
+                    await _userManager.AddToRoleAsync(user, "Customer");
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",
                         pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",

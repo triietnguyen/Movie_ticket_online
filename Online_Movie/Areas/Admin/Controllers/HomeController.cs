@@ -13,12 +13,14 @@ namespace Online_Movie.Areas.Admin.Controllers
     {
         private IMovieReposistory _movieReposistory;
         private ICategoryReposistory _categoryReposistory;
+        private IShowtimeReposistory _showtimeReposistory;
         private readonly SignInManager<Online_MovieUser> _signInManager;
 
-        public HomeController(IMovieReposistory movieReposistory, ICategoryReposistory categoryReposistory, SignInManager<Online_MovieUser> signInManager)
+        public HomeController(IMovieReposistory movieReposistory, ICategoryReposistory categoryReposistory, IShowtimeReposistory showtimeReposistory ,SignInManager<Online_MovieUser> signInManager)
         {
             _movieReposistory = movieReposistory;
             _categoryReposistory = categoryReposistory;
+            _showtimeReposistory= showtimeReposistory;
             _signInManager = signInManager;
         }
         public IActionResult Index()
@@ -63,6 +65,13 @@ namespace Online_Movie.Areas.Admin.Controllers
             return RedirectToAction("ViewAllMovies");
         }
 
+        [HttpPost]
+        public IActionResult SaveShowtime(Showtime showtime)
+        {
+            _showtimeReposistory.Create(showtime);
+            return RedirectToAction("ViewAllShowtimes");
+        }
+
         [HttpGet]
         public IActionResult CreateCategory()
         {
@@ -82,6 +91,19 @@ namespace Online_Movie.Areas.Admin.Controllers
             
             return View("CreateMovie", new Movie());
         }
+        [HttpGet]
+        public IActionResult CreateShowtime()
+        {
+            var q1 = from c in _movieReposistory.GetAll()
+                     select new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
+                     {
+                         Text = c.MovieName,
+                         Value = c.MovieId.ToString(),
+                     };
+            ViewBag.MovieId = q1.ToList();
+
+            return View("CreateShowtime", new Showtime());
+        }
 
         public IActionResult EditCategory(int id)
         {
@@ -100,6 +122,18 @@ namespace Online_Movie.Areas.Admin.Controllers
             return View("EditMovie", _movieReposistory.findByID(id));
         }
 
+        public IActionResult EditShowtime(int id)
+        {
+            var q1 = from c in _movieReposistory.GetAll()
+                     select new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
+                     {
+                         Text = c.MovieName,
+                         Value = c.MovieId.ToString(),
+                     };
+            ViewBag.MovieId = q1.ToList();
+            return View("EditShowtime", _showtimeReposistory.findByID(id));
+        }
+
         [HttpPost]
         public IActionResult UpdateCategory(Category category)
         {
@@ -114,6 +148,13 @@ namespace Online_Movie.Areas.Admin.Controllers
             return RedirectToAction("ViewAllMovies");
         }
 
+        [HttpPost]
+        public IActionResult UpdateShowtime(Showtime showtime)
+        {
+            _showtimeReposistory.Update(showtime);
+            return RedirectToAction("ViewAllShowtimes");
+        }
+
         public IActionResult DeleteCategory(int id)
         {
             _categoryReposistory.Delete(id);
@@ -126,6 +167,12 @@ namespace Online_Movie.Areas.Admin.Controllers
             return RedirectToAction("ViewAllMovies");
         }
 
+        public IActionResult DeleteShowtime(int id)
+        {
+            _showtimeReposistory.Delete(id);
+            return RedirectToAction("ViewAllShowtimes");
+        }
+
         public IActionResult ViewAllMovies()
         {
             List<Movie> lst = _movieReposistory.GetAll();
@@ -136,6 +183,12 @@ namespace Online_Movie.Areas.Admin.Controllers
         {
             List<Category> lst = _categoryReposistory.GetAll();
             return View("ViewAllCategories", lst);
+        }
+
+        public IActionResult ViewAllShowtimes()
+        {
+            List<Showtime> lst = _showtimeReposistory.GetAll();
+            return View("ViewAllShowtimes", lst);
         }
     }
 }

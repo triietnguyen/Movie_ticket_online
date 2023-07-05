@@ -1,5 +1,6 @@
 ﻿@model Online_Movie.Models.Movie
-
+@using Online_Movie.Repository;
+@inject IShowtimeReposistory showtimeRepository
 <!-- Loading third party fonts -->
 <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
 <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +42,7 @@
 							<li><strong>Stars:</strong> Nicolas Cage, Ryan Reynolds, Emma Stone</li>
 						</ul>
 						<ul>
-							<a asp-action="Ticket_Booking">
+							<a asp-action="Ticket_Booking" asp-route-id="@Model.MovieId">
 								<button class="btn btn-primary btn-lg btn-block" type="submit">Booking</button>
 							</a>
 						</ul>

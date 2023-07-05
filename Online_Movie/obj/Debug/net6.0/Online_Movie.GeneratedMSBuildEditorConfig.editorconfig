@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxDcmVhdGVNb3ZpZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/CreateShowtime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxDcmVhdGVTaG93dGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/EditCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxFZGl0Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/EditMovie.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxFZGl0TW92aWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/EditShowtime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxFZGl0U2hvd3RpbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/Index.cshtml]
@@ -46,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/ViewAllMovies.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxWaWV3QWxsTW92aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/Home/ViewAllShowtimes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxWaWV3QWxsU2hvd3RpbWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/triet/Documents/Bài học/Phát triển web/Online_Movie/Movie_ticket_online/Online_Movie/Areas/Admin/Views/_ViewImports.cshtml]

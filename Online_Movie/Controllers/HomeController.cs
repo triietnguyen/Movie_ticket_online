@@ -1,21 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Online_Movie.Models;
-using Online_Movie.Models.Authentication;
 using Online_Movie.Repository;
 using System.Collections.Generic;
 using System.Diagnostics;
-
 namespace Online_Movie.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private IMovieReposistory _movieReposistory;
+        private IShowtimeReposistory _showtimeReposistory;
 
-        public HomeController(ILogger<HomeController> logger, IMovieReposistory movieReposistory)
+        public HomeController(ILogger<HomeController> logger, IMovieReposistory movieReposistory, IShowtimeReposistory showtimeReposistory)
         {
             _logger = logger;
             _movieReposistory = movieReposistory;
+            _showtimeReposistory = showtimeReposistory;
+        }
+
+        public IActionResult Index()
+        {
+            List<Movie> movies = _movieReposistory.GetAll();
+            return View(movies);
         }
 
         public IActionResult findMoviesByCategoryId(int id)
@@ -35,20 +42,17 @@ namespace Online_Movie.Controllers
             return View(movies);
         }
         
-        public IActionResult Index()
-        {
-            List<Movie> movies = _movieReposistory.GetAll();
-			return View(movies);
-        }
-        [Authentication]
-        public IActionResult Ticket_Booking()
+        
+/*        [Authorize]
+*/        public IActionResult Ticket_Booking(int id)
 		{
-			return View();
-		}
+            List<Showtime> s = _showtimeReposistory.GetAllShowtimesByMovieId(id);
+            return View(s);
+        }
 
         public IActionResult Seat_Selection()
         {
-            return View();
+            return View("Seat_Selection");
         }
         public IActionResult About()
 		{

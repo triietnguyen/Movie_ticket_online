@@ -2097,6 +2097,10 @@
       "PackagePath": "staticwebassets\\Admin\\js\\startmin.js"
     },
     {
+      "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Login\\styles.css",
+      "PackagePath": "staticwebassets\\Login\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Detail\\__MACOSX\\._about.html",
       "PackagePath": "staticwebassets\\Movie_Detail\\__MACOSX\\._about.html"
     },

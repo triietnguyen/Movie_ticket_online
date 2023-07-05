@@ -1,0 +1,63 @@
+﻿@model Online_Movie.Models.Showtime
+
+<div class="pagetitle">
+    <h1>Form Elements</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Forms</li>
+            <li class="breadcrumb-item active">Elements</li>
+        </ol>
+    </nav>
+</div>
+<section class="section">
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">General Form Elements</h5>
+
+                    <!-- General Form Elements -->
+                    <form asp-action="UpdateShowtime">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                       
+                        <div class="row mb-3">
+                            <label asp-for="MovieId" class="control-label"></label>
+                            <select asp-for="MovieId" class="form-control" asp-items="ViewBag.MovieId"></select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Date" class="control-label"></label>
+                            <input asp-for="Date" class="form-control" />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Time" class="control-label"></label>
+                            <input asp-for="Time" class="form-control" />
+                            <span asp-validation-for="Time" class="text-danger"></span>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="Location" class="control-label"></label>
+                            <input asp-for="Location" class="form-control" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+
+                        <div class="row mb-3">
+                            
+                            <div class="col-sm-10">
+                                <button type="submit" value="Update" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+
+                    </form><!-- End General Form Elements -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

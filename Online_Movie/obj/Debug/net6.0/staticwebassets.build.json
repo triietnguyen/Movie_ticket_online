@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "24m6TixBereQI2FT7sS5LMsrsj+V+pOWLySvMXgJ1yQ=",
+  "Hash": "1aP227RDT1c/l4A0SntvS4zby7C+kK6VZxx3tLcOk4I=",
   "Source": "Online_Movie",
   "BasePath": "_content/Online_Movie",
   "Mode": "Default",
@@ -13241,6 +13241,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Login\\styles.css",
+      "SourceId": "Online_Movie",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\",
+      "BasePath": "_content/Online_Movie",
+      "RelativePath": "Login/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Login\\styles.css"
     },
     {
       "Identity": "C:\\Users\\triet\\Documents\\Bài học\\Phát triển web\\Online_Movie\\Movie_ticket_online\\Online_Movie\\wwwroot\\Movie_Detail\\__MACOSX\\._about.html",

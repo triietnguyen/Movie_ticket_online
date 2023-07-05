@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Online_Movie.Models.Showtime>
 <!DOCTYPE html>
 <html>
 
@@ -37,12 +37,15 @@
                             <div id="screen-select-div">
                                 <h2>Show time Selection</h2>
                                 <div class="carousel carousel-nav" data-flickity='{"contain": true, "pageDots": false }'>
-                                    <div class="carousel-cell" id="1" onclick="myFunction(1)">
-                                        <div class="date-numeric">13</div>
-                                        <div class="date-day">Today</div>
+                                    @foreach (var showtime in Model)
+                                    {
+                                        <div class="carousel-cell" id="@showtime.Id" onclick="myFunction(@showtime.Id)">
+                                        <div class="date-numeric">@showtime.Date</div>
                                     </div>
+                                    }
+                                    
 
-                                    <div class="carousel-cell" id="2" onclick="myFunction(2)">
+                                    @*<div class="carousel-cell" id="2" onclick="myFunction(2)">
                                         <div class="date-numeric">14</div>
                                         <div class="date-day">Tomorrow</div>
                                     </div>
@@ -65,103 +68,31 @@
                                     <div class="carousel-cell" id="7" onclick="myFunction(7)">
                                         <div class="date-numeric">19</div>
                                         <div class="date-day">Friday</div>
-                                    </div>
+                                    </div>*@
                                 </div>
                                 <ul class="time-ul">
-                                    <li class="time-li">
+                                    @foreach (var showtime in Model)
+                                    {
+                                        <li class="time-li">
                                         <div class="screens">
-                                            Screen 1
+                                            @showtime.Location
                                         </div>
                                         <div class="time-btn">
                                             <button class="screen-time" onclick="timeFunction()">
-                                                1:05 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                4:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                9:00 PM
+                                                    @showtime.Time
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="time-li">
-                                        <div class="screens">
-                                            Screen 2
-                                        </div>
-                                        <div class="time-btn">
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                3:00 PM
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="time-li">
-                                        <div class="screens">
-                                            Screen 3
-                                        </div>
-                                        <div class="time-btn">
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                9:05 AM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                10:00 PM
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="time-li">
-                                        <div class="screens">
-                                            Screen 4
-                                        </div>
-                                        <div class="time-btn">
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                9:05 AM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                11:00 AM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                3:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                7:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                10:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                11:00 PM
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li class="time-li">
-                                        <div class="screens">
-                                            Screen 5
-                                        </div>
-                                        <div class="time-btn">
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                9:05 AM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                12:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                1:00 PM
-                                            </button>
-                                            <button class="screen-time" onclick="timeFunction()">
-                                                3:00 PM
-                                            </button>
-                                        </div>
-                                    </li>
-
+                                    }
                                 </ul>
                             </div>
                             <input id="screen-next-btn" type="button" name="next-step" class="next-step" value="Continue Booking" />
                         </fieldset>
                         <fieldset>
-
                             <div>
                                 <iframe id="seat-sel-iframe"
                                         style="  box-shadow: 0 14px 12px 0 var(--theme-border), 0 10px 50px 0 var(--theme-border); width: 800px; height: 550px; display: block; margin-left: auto; margin-right: auto;"
-                                        src="seat_selection/seat_sel.html"></iframe>
+                                        src="/Home/Seat_Selection"></iframe>
                             </div>
                             <br>
                             <input type="button" name="next-step" class="next-step" value="Proceed to Payment" />
@@ -434,7 +365,7 @@
                                 </div>
                             </div>
                             <input type="button" name="previous-step" class="home-page-btn" value="Browse to Home Page"
-                                   onclick="location.href='index';" />
+                                   onclick="location.href='/Home/index';" />
                         </fieldset>
                     </form>
                 </div>

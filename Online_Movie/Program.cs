@@ -41,6 +41,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.AddTransient<IMovieReposistory, MovieReposistory>();
 builder.Services.AddTransient<ICategoryReposistory, CategoryReposistory>();
 builder.Services.AddTransient<IUserReposistory, UserRepository>();
+builder.Services.AddTransient<IShowtimeReposistory, ShowtimeReposistory>();
 //step 1
 builder.Services.AddSession();
 var app = builder.Build();

@@ -115,8 +115,17 @@ namespace Online_Movie.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
-                    return LocalRedirect("/admin");
+                    if(Input.Email.ToLower()== "admin@gmail.com")
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return LocalRedirect("/admin");
+                    }
+                    else
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return LocalRedirect("/Home");
+                    }
+                    
                 }
                 if (result.RequiresTwoFactor)
                 {
